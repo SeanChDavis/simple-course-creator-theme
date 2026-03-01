@@ -18,6 +18,11 @@ section[class*="-section"] {
 
 .page-header {
 
+	.container {
+		padding-bottom: 0;
+		padding-top: clamp(1.5rem, 4vw, 3rem);
+	}
+
 	&.centered {
 		text-align: center;
 

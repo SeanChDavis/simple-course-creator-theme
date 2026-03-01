@@ -120,3 +120,9 @@
 		color: var(--subdued-body);
 	}
 }
+
+@mixin framed {
+	border-radius: 6px;
+	border: 1px solid rgba(0, 0, 0, .2);
+	box-shadow: 4px 4px 0 0 rgba(0, 0, 0, .05);
+}

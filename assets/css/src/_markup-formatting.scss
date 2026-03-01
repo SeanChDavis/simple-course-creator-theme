@@ -80,6 +80,10 @@ object {
 img {
 	height: auto;
 	max-width: 100%;
+
+	&.famed {
+		@include framed;
+	}
 }
 
 figcaption,

@@ -10065,6 +10065,12 @@ progress {
   padding: 1rem;
 }
 
+.wp-block-media-text__media img {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.05);
+}
+
 .wp-block-audio,
 .wp-block-audio-editor {
   background-color: var(--lightest);
@@ -10257,7 +10263,7 @@ progress {
 
 #colophon {
   color: var(--subdued-body);
-  font-size: 0.88rem;
+  font-size: 0.83rem;
 }
 #colophon a {
   color: var(--body);
@@ -10471,7 +10477,7 @@ select:focus {
   align-items: center;
 }
 #masthead .site-header-row .site-branding .custom-logo-link .custom-logo {
-  max-width: 120px;
+  max-width: 220px;
 }
 #masthead .site-header-row .site-branding .site-title a {
   color: var(--body);
@@ -10513,7 +10519,6 @@ select:focus {
 #site-navigation #primary-menu .menu-item a {
   color: var(--body);
   font-size: 0.9rem;
-  font-weight: 600;
   line-height: 1;
   text-decoration: none;
 }
@@ -10903,6 +10908,11 @@ img {
   height: auto;
   max-width: 100%;
 }
+img.famed {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.05);
+}
 
 figcaption,
 .wp-caption-text {
@@ -11156,6 +11166,10 @@ section[class*=-section] .section-header .section-description {
   }
 }
 
+.page-header .container {
+  padding-bottom: 0;
+  padding-top: clamp(1.5rem, 4vw, 3rem);
+}
 .page-header.centered {
   text-align: center;
 }
@@ -11522,6 +11536,23 @@ html {
   overflow-wrap: break-word;
 }
 
+/* Page-specific styles */
+.page-front .wp-block-media-text__media img,
+.framed img {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Integration-specific styles */
+#page .scc-post-list-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+#page #scc-wrap li {
+  padding: 0;
+}
+
 /* Make sure final color adjustments come last */
 :root {
   --white: #fff;
@@ -11530,6 +11561,7 @@ html {
 }
 
 body {
+  background-color: var(--lightest);
   color: var(--body);
 }
 

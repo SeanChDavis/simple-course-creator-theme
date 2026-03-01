@@ -33,5 +33,11 @@ License URI: LICENSE
 @import "_structure";
 @import "_typography";
 
+/* Page-specific styles */
+@import "pages/_front-page";
+
+/* Integration-specific styles */
+@import "integrations/_simple-course-creator";
+
 /* Make sure final color adjustments come last */
 @import "_colors";

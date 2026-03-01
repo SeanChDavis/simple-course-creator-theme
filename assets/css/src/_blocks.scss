@@ -62,6 +62,10 @@
 	}
 }
 
+.wp-block-media-text__media img {
+	@include framed;
+}
+
 .wp-block-audio,
 .wp-block-audio-editor {
 	background-color: var(--lightest);
