@@ -20,9 +20,6 @@ const THEME_INCLUDES = THEME_TEMPLATE_DIR . '/includes';
  */
 function scct_setup() {
 
-	// Make theme available for translation.
-	load_theme_textdomain( 'scct', get_template_directory() . '/languages' );
-
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
