@@ -1,0 +1,56 @@
+body {
+
+	& * {
+		box-sizing: border-box;
+	}
+}
+
+/**
+ * Bootstrap Container: https://getbootstrap.com/docs/5.3/layout/containers/
+ *
+ * .container and .container-{breakpoint} are fundamental Bootstrap classes that
+ * contain, pad, and align content. They are used to create responsive, centered
+ * containers for website content.
+ *
+ * However, the Container style rules are only concerned with the width of the
+ * content container, not its vertical spacing or vertical alignment.
+ *
+ * This theme adds vertical padding to containers at various sizes. For example,
+ * an element using "container large" will still use Bootstrap's width-related
+ * styles, but will also have a top and bottom padding given by the addition of the
+ * .large class.
+ *
+ * These CSS rules are written in mixins for easy reuse. See _mixins.scss.
+ */
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+	@include section-container;
+
+	&.tiny {
+		@include section-container__tiny;
+	}
+
+	&.small {
+		@include section-container__small;
+	}
+
+	&.medium {
+		@include section-container__medium;
+	}
+
+	&.large {
+		@include section-container__large;
+	}
+
+	&.huge {
+		@include section-container__huge;
+	}
+
+	&.no-vertical-spacing {
+		@include section-container__no-vertical-spacing;
+	}
+}

@@ -1,0 +1,30 @@
+#masthead {
+
+	.site-header-row {
+		align-items: center;
+
+		.site-branding {
+
+			.custom-logo-link {
+
+				.custom-logo {
+					max-width: 120px;
+				}
+			}
+
+			.site-title {
+
+				a {
+					color: var(--body);
+					text-decoration: none;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: var(--action);
+					}
+				}
+			}
+		}
+	}
+}

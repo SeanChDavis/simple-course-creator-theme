@@ -1,0 +1,29 @@
+.grid-item {
+
+	.entry-header {
+
+		.post-thumbnail {
+			display: block;
+			margin-bottom: 1rem;
+		}
+
+		.entry-title {
+			font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+
+			a {
+				color: var(--body);
+				text-decoration: none;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: var(--action);
+				}
+			}
+		}
+	}
+
+	.entry-footer {
+		padding: 1rem 0 0;
+	}
+}

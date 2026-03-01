@@ -1,0 +1,122 @@
+/**
+ * The container's x-axis rules
+ */
+@mixin section-container-x {
+
+	& {
+		padding-left: clamp(1.5rem, 2.6vw, 2rem);
+		padding-right: clamp(1.5rem, 2.6vw, 2rem);
+		margin-right: auto;
+		margin-left: auto;
+		width: 100%;
+	}
+
+	@media all and (min-width: 576px) {
+		max-width: 540px;
+	}
+
+	@media all and (min-width: 768px) {
+		max-width: 720px;
+	}
+
+	@media all and (min-width: 992px) {
+		max-width: 960px;
+	}
+
+	@media all and (min-width: 1200px) {
+		max-width: 1140px;
+	}
+
+	@media all and (min-width: 1400px) {
+		max-width: 1320px;
+	}
+}
+
+/**
+ * Represents: class="container"
+ */
+@mixin section-container {
+	@include section-container-x;
+
+	& {
+		padding-bottom: clamp(2rem, 6.45vw, 5rem);
+		padding-top: clamp(2rem, 6.45vw, 5rem);
+	}
+}
+
+/**
+ * Represents: class="container tiny"
+ */
+@mixin section-container__tiny {
+	padding-bottom: clamp(1rem, 1.93vw, 1.5rem);
+	padding-top: clamp(1rem, 1.93vw, 1.5rem);
+}
+
+/**
+ * Represents: class="container small"
+ */
+@mixin section-container__small {
+	padding-bottom: clamp(1.5rem, 3.86vw, 3rem);
+	padding-top: clamp(1.5rem, 3.86vw, 3rem);
+}
+
+/**
+ * Represents: class="container medium"
+ * Same as default. Exists for consistency.
+ */
+@mixin section-container__medium {
+	@include section-container;
+}
+
+/**
+ * Represents: class="container large"
+ */
+@mixin section-container__large {
+	padding-bottom: clamp(2.25rem, 9vw, 7rem);
+	padding-top: clamp(2.25rem, 9vw, 7rem);
+}
+
+/**
+ * Represents: class="container huge"
+ */
+@mixin section-container__huge {
+	padding-bottom: clamp(2.5rem, 11.6vw, 9rem);
+	padding-top: clamp(2.5rem, 11.6vw, 9rem);
+}
+
+/**
+ * Represents: class="container no-vertical-spacing"
+ */
+@mixin section-container__no-vertical-spacing {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+/**
+ * Uniformly reduces font size of headings for tight areas
+ */
+@mixin heading-font-reduced {
+
+	h1, .h1,
+	h2, .h2 {
+		font-size: 2rem;
+	}
+
+	h3, .h3 {
+		font-size: 1.5rem;
+	}
+
+	h4, .h4 {
+		color: var(--subdued-body);
+		font-size: 1.25rem;
+	}
+
+	h5, .h5,
+	h6, .h6 {
+		font-size: 1rem;
+	}
+
+	h6, .h6 {
+		color: var(--subdued-body);
+	}
+}

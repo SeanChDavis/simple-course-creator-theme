@@ -1,0 +1,144 @@
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.page-title,
+.section-title,
+.archive .page-title span {
+	display: block;
+	line-height: 1.4;
+	margin: 0 0 clamp(1rem, 1.75vw, 1.25rem);
+}
+
+h1, .h1,
+h2, .h2,
+.page-title,
+.page-header.wp-block-group > .wp-block-group__inner-container > h1:first-child,
+.page-header.wp-block-group > .wp-block-group__inner-container > h2:first-child,
+.page-header.wp-block-group > .wp-block-group__inner-container > h3:first-child,
+.archive .page-title span {
+	font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h3, .h3,
+.section-title {
+	font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+h4, .h4 {
+	font-size: clamp(1.25rem, 5vw, 2.25rem);
+}
+
+h5, .h5,
+h6, .h6 {
+	font-size: 1.25rem;
+}
+
+p {
+	margin-bottom: clamp(1.25rem, 2vw, 1.67rem);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+ul,
+ol {
+	margin: 0 0 clamp(1.25rem, 2vw, 1.67rem) 1.25rem;
+	padding-left: 1rem;
+
+	li {
+		margin-bottom: .5rem;
+
+		ul,
+		ol {
+			margin-bottom: .75rem;
+			margin-top: .75rem;
+		}
+	}
+}
+
+a {
+	color: var(--action);
+	text-decoration: underline;
+
+	&:active,
+	&:hover,
+	&:focus {
+		color: var(--action);
+		text-decoration: none;
+	}
+}
+
+iframe,
+object {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+figcaption,
+.wp-caption-text {
+	font-size: 1rem;
+	font-style: italic;
+}
+
+q {
+	font-style: italic;
+	font-weight: 500;
+}
+
+pre {
+	background-color: var(--lightest);
+	padding: 1.5rem;
+}
+
+address {
+	margin-bottom: 1.25rem;
+}
+
+table {
+	font-size: .88rem;
+}
+
+.alignleft {
+
+	@media all and (min-width: 768px) {
+		float: left;
+		margin-bottom: 1rem;
+		margin-right: 1.5rem;
+	}
+}
+
+.alignright {
+
+	@media all and (min-width: 768px) {
+		float: right;
+		margin-bottom: 1rem;
+		margin-left: 1.5rem;
+	}
+}
+
+// Adjustments to markup in standard WordPress content areas (so, not custom)
+.entry-content:not(.page-sections-content),
+.comment-content {
+
+	@include heading-font-reduced;
+
+	& > [class*="wp-block-"] {
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	figure,
+	img {
+		max-width: 100%;
+	}
+}
