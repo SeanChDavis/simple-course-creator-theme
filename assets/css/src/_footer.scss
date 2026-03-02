@@ -10,8 +10,8 @@
 	.site-copyright {
 
 		a {
+			@include headingFont;
 			color: var(--body);
-			font-weight: 700;
 			text-decoration: none;
 
 			&:active,
@@ -25,6 +25,10 @@
 
 .fat-footer-section {
 	@include heading-font-reduced;
+
+	& {
+		font-size: .94rem;
+	}
 
 	.fat-col {
 
@@ -46,7 +50,21 @@
 		}
 	}
 
+	.wp-block-image {
+		margin-bottom: .48rem;
+
+		img {
+			vertical-align: baseline;
+		}
+	}
+
 	.single-col {
+
+		.wp-block-heading {
+			font-size: .94rem;
+			line-height: 1;
+			margin-bottom: 1rem;
+		}
 
 		ul:not(.wp-block-social-links),
 		.menu {
@@ -60,17 +78,16 @@
 				margin-bottom: 0;
 
 				a {
+					@include bodyFont;
 					color: var(--body);
 					display: block;
-					font-weight: 600;
-					line-height: 1;
-					padding: 7px 0;
 					text-decoration: none;
 
 					&:active,
 					&:focus,
 					&:hover {
 						color: var(--action);
+						text-decoration: underline;
 					}
 				}
 			}

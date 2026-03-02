@@ -4,7 +4,7 @@ Theme Name: SCC Theme
 Author: Sean Davis
 Author URI: https://seanchdavis.com
 Description: Simple Course Creator Theme based on WordPress Starter Theme
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 */
@@ -10270,8 +10270,8 @@ progress {
   text-decoration: underline;
 }
 #colophon .site-copyright a {
+  font-family: "Cal Sans", system-ui, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: var(--body);
-  font-weight: 700;
   text-decoration: none;
 }
 #colophon .site-copyright a:active, #colophon .site-copyright a:focus, #colophon .site-copyright a:hover {
@@ -10296,11 +10296,25 @@ progress {
 .fat-footer-section h6, .fat-footer-section .h6 {
   color: var(--subdued-body);
 }
+.fat-footer-section {
+  font-size: 0.94rem;
+}
 .fat-footer-section .fat-col .fat-footer-area-one p a {
   color: var(--subdued-body);
 }
 .fat-footer-section .fat-col .widget_block p {
   margin-bottom: clamp(1.25rem, 2vw, 1.67rem);
+}
+.fat-footer-section .wp-block-image {
+  margin-bottom: 0.48rem;
+}
+.fat-footer-section .wp-block-image img {
+  vertical-align: baseline;
+}
+.fat-footer-section .single-col .wp-block-heading {
+  font-size: 0.94rem;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 .fat-footer-section .single-col ul:not(.wp-block-social-links),
 .fat-footer-section .single-col .menu {
@@ -10319,11 +10333,9 @@ progress {
 .fat-footer-section .single-col ul:not(.wp-block-social-links) .menu-item a,
 .fat-footer-section .single-col .menu li a,
 .fat-footer-section .single-col .menu .menu-item a {
+  font-family: "Red Hat Text", system-ui, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: var(--body);
   display: block;
-  font-weight: 600;
-  line-height: 1;
-  padding: 7px 0;
   text-decoration: none;
 }
 .fat-footer-section .single-col ul:not(.wp-block-social-links) li a:active, .fat-footer-section .single-col ul:not(.wp-block-social-links) li a:focus, .fat-footer-section .single-col ul:not(.wp-block-social-links) li a:hover,
@@ -10337,6 +10349,7 @@ progress {
 .fat-footer-section .single-col .menu .menu-item a:focus,
 .fat-footer-section .single-col .menu .menu-item a:hover {
   color: var(--action);
+  text-decoration: underline;
 }
 
 .button,
@@ -10461,13 +10474,15 @@ select:focus {
 }
 .grid-item .entry-header .entry-title {
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  margin-bottom: 1rem;
 }
 .grid-item .entry-header .entry-title a {
   color: var(--body);
-  text-decoration: none;
+  text-decoration: underline;
 }
 .grid-item .entry-header .entry-title a:hover, .grid-item .entry-header .entry-title a:focus, .grid-item .entry-header .entry-title a:active {
   color: var(--action);
+  text-decoration: none;
 }
 .grid-item .entry-footer {
   padding: 1rem 0 0;
@@ -10843,13 +10858,16 @@ h6, .h6,
 }
 
 h1, .h1,
-h2, .h2,
+h2, .h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
 .page-title,
 .page-header.wp-block-group > .wp-block-group__inner-container > h1:first-child,
 .page-header.wp-block-group > .wp-block-group__inner-container > h2:first-child,
 .page-header.wp-block-group > .wp-block-group__inner-container > h3:first-child,
 .archive .page-title span {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 h3, .h3,
@@ -11190,12 +11208,15 @@ section[class*=-section] .section-header .section-description {
 }
 .page-header .page-description {
   color: var(--subdued-body);
-  max-width: 640px;
+  max-width: 700px;
 }
 @media all and (min-width: 768px) {
   .page-header .page-description {
     font-size: clamp(1rem, 2vw, 1.167rem);
   }
+}
+.page-header .page-description p {
+  font-size: 1rem;
 }
 .page-header .entry-meta {
   margin-top: 1rem;

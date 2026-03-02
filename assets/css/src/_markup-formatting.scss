@@ -13,13 +13,16 @@ h6, .h6,
 }
 
 h1, .h1,
-h2, .h2,
+h2, .h2 {
+	font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
 .page-title,
 .page-header.wp-block-group > .wp-block-group__inner-container > h1:first-child,
 .page-header.wp-block-group > .wp-block-group__inner-container > h2:first-child,
 .page-header.wp-block-group > .wp-block-group__inner-container > h3:first-child,
 .archive .page-title span {
-	font-size: clamp(2rem, 5vw, 3.5rem);
+	font-size: clamp(2rem, 4vw, 3rem);
 }
 
 h3, .h3,

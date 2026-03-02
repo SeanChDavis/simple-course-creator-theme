@@ -28,12 +28,6 @@ if ( isset( $args['description'] ) && ! empty( $args['description'] ) ) {
 			</div>
 		<?php } ?>
 
-		<?php if ( is_single() ) { ?>
-			<div class="entry-meta">
-				<?php scct_posted_on(); ?>
-			</div>
-		<?php } ?>
-
 		<?php if ( is_search() ) { ?>
 			<div class="search-form mt-5">
 				<?php get_search_form(); ?>

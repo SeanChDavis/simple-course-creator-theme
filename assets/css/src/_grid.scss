@@ -9,15 +9,17 @@
 
 		.entry-title {
 			font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+			margin-bottom: 1rem;
 
 			a {
 				color: var(--body);
-				text-decoration: none;
+				text-decoration: underline;
 
 				&:hover,
 				&:focus,
 				&:active {
 					color: var(--action);
+					text-decoration: none;
 				}
 			}
 		}
